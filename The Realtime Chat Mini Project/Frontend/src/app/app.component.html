@@ -1,0 +1,10 @@
+<input [formControl]="SelectedUserName"><button (click)="signInUser()">Sign in</button>
+
+<input [formControl]="SelectedRoomNumber"><button (click)="selectRoom()">Select a room</button>
+
+<input [formControl]="SentMessage"><button (click)="sendMessage()">Send</button>
+
+<ng-container *ngFor="let message of messages">
+  <div>{{message}}</div>
+</ng-container>
+
