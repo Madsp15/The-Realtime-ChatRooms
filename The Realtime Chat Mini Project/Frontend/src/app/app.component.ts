@@ -24,9 +24,10 @@ export class AppComponent {
 
 
   sendMessage() {
-    let o = new ClientWantsToBroadCastToRoom({Message: this.messageContent.value?.toString()})
+    let o = new ClientWantsToBroadCastToRoom({
+      Message: this.messageContent.value?.toString()})
     this.ws.send(JSON.stringify(o));
-    
+
   }
 
   signInUser() {

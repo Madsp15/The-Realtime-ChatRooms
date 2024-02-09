@@ -31,6 +31,7 @@ server.Start(ws =>
         try
         {
             await app.InvokeClientEventHandler(clientEventHandlers, ws, message);
+            Console.WriteLine(message);
         }
         catch (Exception e)
         {
