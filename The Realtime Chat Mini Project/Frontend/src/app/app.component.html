@@ -1,10 +1,30 @@
-<input [formControl]="SelectedUserName"><button (click)="signInUser()">Sign in</button>
+<div class="container darker">
+  <label for="username">User name:</label>
+  <input id="username" [formControl]="SelectedUserName" placeholder="Enter your name">
+  <button (click)="signInUser()">Sign in</button>
+</div>
 
-<input [formControl]="SelectedRoomNumber"><button (click)="selectRoom()">Select a room</button>
+<div class="container">
+  <label for="room">Room number:</label>
+  <input id="room" [formControl]="SelectedRoomNumber" placeholder="Enter a room number">
+  <button (click)="selectRoom()">Join room</button><button (click)="ReturnRooms()">What rooms am I in?</button>
+</div>
 
-<input [formControl]="SentMessage"><button (click)="sendMessage()">Send</button>
 
-<ng-container *ngFor="let message of messages">
-  <div>{{message}}</div>
-</ng-container>
 
+<h2 style="text-align: center;">Chat Messages</h2>
+
+<div class="container">
+  <ng-container *ngFor="let message of messages">
+    <div>
+      <strong>Message:</strong> {{message.username}} {{message.roomId}}: {{message.message}} <span class="time-right">{{message.timeStamp | date:'dd MMMM yyyy HH:mm:ss"'}}</span><br>
+    </div>
+  </ng-container>
+
+</div>
+<div class="container darker">
+  <label for="message">Message:</label>
+  <input id="message" [formControl]="messageContent" placeholder="Enter your message"> <br>
+  <button (click)="sendMessages()">Send message to all joined rooms</button>
+  <button (click)="sendMessage()">Send to this room</button>
+</div>

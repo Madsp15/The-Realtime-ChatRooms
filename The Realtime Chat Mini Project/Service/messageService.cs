@@ -17,6 +17,11 @@ public class MessageService
       {
             return _messageRepository.SaveMessage(messageData);
       }
+   
+   public IEnumerable<MessageData> GetLast5Messages(int roomId)
+   {
+       return _messageRepository.GetLast5Messages(roomId);
+   }
 }
 
    

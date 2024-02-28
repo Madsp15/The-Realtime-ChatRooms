@@ -8,12 +8,19 @@ export class BaseDto<T> {
 }
 
 export class ClientWantsToBroadCastToRoom extends BaseDto<ClientWantsToBroadCastToRoom> {
-  Message?: string;
+  message?: string;
+  roomId?: number;
+}
+
+export class ClientWantsToBroadCastToRooms extends BaseDto<ClientWantsToBroadCastToRoom> {
+  message?: string;
 }
 export class ClientWantsToSignIn extends BaseDto<ClientWantsToSignIn> {
-  Username?: string;
+  username?: string;
 }
 
 export class ClientWantsToEnterRoom extends BaseDto<ClientWantsToEnterRoom> {
-  RoomId?: number;
+  roomId?: number;
+}
+export class ReturnRoomsUserIsIn extends BaseDto<ReturnRoomsUserIsIn> {
 }

@@ -12,11 +12,13 @@
     "http": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "swagger",
       "applicationUrl": "http://localhost:5185",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "pgconn": "postgres://bnltsokj:6HfC9rNKUMgYa0xbsOW90BzPi1JNfSU5@snuffleupagus.db.elephantsql.com/bnltsokj",
+        "apikey": "0119292be6074b45ac5c8f1592c92b60"
       }
     },
     "https": {

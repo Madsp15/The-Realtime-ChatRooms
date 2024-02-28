@@ -2,7 +2,8 @@
 
 public class MessageData
 {
-    public string Message { get; set; }
-    public string Nickname { get; set; }
-    public int Room { get; set; }
+    public string message { get; set; }
+    public string username { get; set; }
+    public int roomId { get; set; }
+    public string timeStamp { get; set; }
 }
